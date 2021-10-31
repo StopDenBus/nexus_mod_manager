@@ -1,0 +1,74 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "pyuic6_MainWindow",
+            "type": "shell",
+            "command": "/home/micha/.local/bin/pyuic6",
+            "args": [
+                "-x",
+                "${workspaceFolder}/app/uic/MainWindow.ui",
+                "-o",
+                "${workspaceFolder}/app/ui/MainWindow.py"
+            ],
+            "dependsOn": ["pyuic6_dlgSettings", "pyuic6_dlgAddGame", "pyuic6_dlgAddMod", "pyuic6_dlgManageProfiles", "pyuic6_dlgMainWindow2"]
+        },
+        {
+            "label": "pyuic6_dlgSettings",
+            "type": "shell",
+            "command": "/home/micha/.local/bin/pyuic6",
+            "args": [
+                "-x",
+                "${workspaceFolder}/app/uic/dlgSettings.ui",
+                "-o",
+                "${workspaceFolder}/app/ui/dlgSettings.py"
+            ],
+        },
+        {
+            "label": "pyuic6_dlgAddGame",
+            "type": "shell",
+            "command": "/home/micha/.local/bin/pyuic6",
+            "args": [
+                "-x",
+                "${workspaceFolder}/app/uic/dlgAddGame.ui",
+                "-o",
+                "${workspaceFolder}/app/ui/dlgAddGame.py"
+            ],
+        },
+        {
+            "label": "pyuic6_dlgAddMod",
+            "type": "shell",
+            "command": "/home/micha/.local/bin/pyuic6",
+            "args": [
+                "-x",
+                "${workspaceFolder}/app/uic/dlgAddMod.ui",
+                "-o",
+                "${workspaceFolder}/app/ui/dlgAddMod.py"
+            ],
+        },
+        {
+            "label": "pyuic6_dlgManageProfiles",
+            "type": "shell",
+            "command": "/home/micha/.local/bin/pyuic6",
+            "args": [
+                "-x",
+                "${workspaceFolder}/app/uic/dlgManageProfiles.ui",
+                "-o",
+                "${workspaceFolder}/app/ui/dlgManageProfiles.py"
+            ],
+        },
+        {
+            "label": "pyuic6_dlgMainWindow2",
+            "type": "shell",
+            "command": "/home/micha/.local/bin/pyuic6",
+            "args": [
+                "-x",
+                "${workspaceFolder}/app/uic/MainWindow2.ui",
+                "-o",
+                "${workspaceFolder}/app/ui/MainWindow2.py"
+            ],
+        }                         
+    ]
+}

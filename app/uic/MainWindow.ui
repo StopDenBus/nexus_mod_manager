@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>888</width>
+    <height>463</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>QT Nexus Mod Manager</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>871</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="labelGames">
+         <property name="text">
+          <string>Select a game</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBoxGames">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="insertPolicy">
+          <enum>QComboBox::InsertAlphabetically</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelProfiles">
+         <property name="text">
+          <string>Select a profile</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBoxProfiles">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Preferred</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Select current profile</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBoxCurrentProfile"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Preferred</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Preferred</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::MinimumExpanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="pushButtonUpdateProfile">
+         <property name="text">
+          <string>Update profile</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Available plugins</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Selected plugins</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QListWidget" name="listWidgetAvailableMods">
+         <property name="dragEnabled">
+          <bool>true</bool>
+         </property>
+         <property name="dragDropMode">
+          <enum>QAbstractItemView::DragDrop</enum>
+         </property>
+         <property name="defaultDropAction">
+          <enum>Qt::MoveAction</enum>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="listWidgetSelectedMods">
+         <property name="dragEnabled">
+          <bool>true</bool>
+         </property>
+         <property name="dragDropMode">
+          <enum>QAbstractItemView::DragDrop</enum>
+         </property>
+         <property name="defaultDropAction">
+          <enum>Qt::MoveAction</enum>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>888</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGame">
+    <property name="title">
+     <string>&amp;Game</string>
+    </property>
+    <addaction name="actionAdd_Game"/>
+    <addaction name="action_Quit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Preferences">
+    <property name="title">
+     <string>&amp;Preferences</string>
+    </property>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuMods">
+    <property name="title">
+     <string>&amp;Mods</string>
+    </property>
+    <addaction name="actionAdd_Mod"/>
+   </widget>
+   <widget class="QMenu" name="menuProfiles">
+    <property name="title">
+     <string>Profiles</string>
+    </property>
+    <addaction name="actionManage_Profiles"/>
+   </widget>
+   <addaction name="menuGame"/>
+   <addaction name="menuProfiles"/>
+   <addaction name="menuMods"/>
+   <addaction name="menu_Preferences"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionAdd_Game">
+   <property name="text">
+    <string>&amp;Add Game</string>
+   </property>
+  </action>
+  <action name="action_Select_Game">
+   <property name="text">
+    <string>&amp;Select Game</string>
+   </property>
+  </action>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="actionAdd_api_key">
+   <property name="text">
+    <string>Add api key</string>
+   </property>
+  </action>
+  <action name="action_API_key">
+   <property name="text">
+    <string>&amp;API key</string>
+   </property>
+  </action>
+  <action name="action_Settingd">
+   <property name="text">
+    <string>&amp;Settingd</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionAdd_Mod">
+   <property name="text">
+    <string>Add Mod</string>
+   </property>
+  </action>
+  <action name="actionManage_Profiles">
+   <property name="text">
+    <string>Manage Profiles</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"qtForPython.uic.path": "/home/micha/.local/bin/pyuic6"
+	}
+}
