@@ -1,0 +1,1 @@
+poetry run python app\__init__.py
