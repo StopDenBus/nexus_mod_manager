@@ -4,6 +4,7 @@ from PyQt6.QtCore import Qt
 from nxmLink import nxmLink, nxmLinkNotParseable
 from ui.MainWindow2 import Ui_MainWindow
 from util import getFileNameFromDownloadLink, FileNameNotFoundExeption, VersionNotFoundException, getVersionFromFileName
+from dlgSettings import dlgSettings
 
 from Keyring import Keyring
 from Games import Games
@@ -46,6 +47,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.lineEditNewGame.returnPressed.connect(self.AddGame)
         
         self.pushButtonRemoveGames.clicked.connect(self.RemoveGame)
+        
+        self.action_Settings.triggered.connect(self.ShowSettings)
+        self.action_Quit.triggered.connect(self.closeApp)
         
         self.UpdateApplication(self.comboBoxGames.currentText())
         
@@ -147,3 +151,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         
         self.SaveConfiguration()
         self.close()
+        
+    def ShowSettings(self):
+        settings = dlgSettings(self)
+        result = settings.exec()
+        if result:
+            api_key = settings.getApiKey()
+            if api_key != "":
+                if self.__keyring.set_api_key(api_key):
+                    self.__api.setApiKey(self.__keyring.get_api_key())
+                    self.statusBar().showMessage('Nexusmod API key updated.')

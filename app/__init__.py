@@ -4,8 +4,6 @@ from PyQt6 import QtWidgets
 
 from MainApplication import SingleApplication, SingleApplicationWithMessaging
 from MainWindow2 import MainWindow
-#from MainWindow import MainWindow
-#from main import MainWindow
 
 if __name__ == "__main__":
     

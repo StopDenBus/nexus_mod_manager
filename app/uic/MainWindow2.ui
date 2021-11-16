@@ -326,7 +326,7 @@
           <x>10</x>
           <y>10</y>
           <width>761</width>
-          <height>21</height>
+          <height>24</height>
          </rect>
         </property>
         <layout class="QFormLayout" name="formLayout_2">
@@ -431,8 +431,32 @@
      <height>19</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu_Preferences">
+    <property name="title">
+     <string>&amp;Preferences</string>
+    </property>
+    <addaction name="action_Settings"/>
+   </widget>
+   <widget class="QMenu" name="menu_Game">
+    <property name="title">
+     <string>&amp;Game</string>
+    </property>
+    <addaction name="action_Quit"/>
+   </widget>
+   <addaction name="menu_Game"/>
+   <addaction name="menu_Preferences"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_Settings">
+   <property name="text">
+    <string>&amp;Settings</string>
+   </property>
+  </action>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
