@@ -1,4 +1,8 @@
 import keyring
+import platform
+
+if platform.system() == 'Windows':
+    from keyring.backends import Windows
 
 class Keyring():
     def __init__(self) -> None:
